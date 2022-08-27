@@ -8,7 +8,7 @@
                 <!-- agency icon and name -->
                 <div class="agency-intro flex fx-cl">
                     <div class="icon">
-                        <img width="100%" src="../../public/icons/ic-144.png">
+                        <img width="100%" src="../global/ic-144.png">
                     </div>
                     <h1>Glaxio UI</h1>
                 </div>
@@ -24,7 +24,7 @@
             </div>
 
             <!-- Glaxy -->
-            <Glaxy></Glaxy>
+            <Glaxy />
 
         </div>
     </div>
@@ -33,9 +33,7 @@
 
 <script setup>
 
-import glaxy from "../components/glaxy.vue";
 import Glaxy from "../components/glaxy.vue";
-
 
 </script>
 
