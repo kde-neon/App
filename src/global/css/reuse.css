@@ -1,0 +1,131 @@
+/*! Popup Message ON Hover */
+
+/*
+
+    To use this popup message on hover
+    you need to add some attr.
+
+    1. role="message"
+    2. aria-label="Your Text"
+
+*/
+
+/* Visible message arrow on hover */
+[role~="message"]:active::after {
+    opacity: 1;
+    transform: translate(-50%, -36px) rotate(180deg);
+    transform: translate(-50%, -36px) rotate(180deg);
+    -o-transform: translate(-50%, -36px) rotate(180deg);
+    -moz-transform: translate(-50%, -36px) rotate(180deg);
+    -webkit-transform: translate(-50%, -36px) rotate(180deg);
+    transition-delay: 1s;
+    -o-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+}
+
+/* Visible message text on hover */
+[aria-label][role~="message"]:active::before {
+    opacity: 1;
+    transform: translate(-50%, -55px);
+    -o-transform: translate(-50%, -55px);
+    -moz-transform: translate(-50%, -55px);
+    -webkit-transform: translate(-50%, -55px);
+    transition-delay: 1s;
+    -o-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+}
+
+/* Message arrow box */
+[role~="message"]::after {
+    left: 50%;
+    content: '';
+    position: fixed;
+}
+
+/* Message arrow box svg icon */
+[role~="message"]::after {
+    opacity: 0;
+    height: 7px;
+    width: 18px;
+    bottom: 0px;
+    pointer-events: none;
+    transition: all .1s ease;
+    -o-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    transform-origin: top;
+    -o-transform-origin: top;
+    -moz-transform-origin: top;
+    -webkit-transform-origin: top;
+    transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    transform: translate(-50%, -20px) rotate(180deg);
+    -o-transform: translate(-50%, -20px) rotate(180deg);
+    -moz-transform: translate(-50%, -20px) rotate(180deg);
+    -webkit-transform: translate(-50%, -20px) rotate(180deg);
+    background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%28180%2018%206%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E) no-repeat;
+    background-size: contain;
+}
+
+/* Message text box */
+[aria-label][role~="message"]::before {
+    left: 50%;
+    opacity: 0;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 10px;
+    position: fixed;
+    border-radius: 4px;
+    pointer-events: none;
+    transform-origin: top;
+    -o-transform-origin: top;
+    -moz-transform-origin: top;
+    -webkit-transform-origin: top;
+    font-family: sans-serif;
+    content: attr(aria-label);
+    transition: all .1s ease;
+    -o-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    transform: translate(-50%, -20px);
+    -o-transform: translate(-50%, -20px);
+    -moz-transform: translate(-50%, -20px);
+    -webkit-transform: translate(-50%, -20px);
+    background: hsla(0, 0%, 0%, 0.878);
+}
+
+@media only screen and (min-width: 768px) {
+    [role~="message"]:hover::after {
+        opacity: 1;
+        transform: translate(-50%, -36px) rotate(180deg);
+        transform: translate(-50%, -36px) rotate(180deg);
+        -o-transform: translate(-50%, -36px) rotate(180deg);
+        -moz-transform: translate(-50%, -36px) rotate(180deg);
+        -webkit-transform: translate(-50%, -36px) rotate(180deg);
+        transition-delay: 1s;
+        -o-transition-delay: 1s;
+        -moz-transition-delay: 1s;
+        -webkit-transition-delay: 1s
+    }
+
+    /* Visible message text on hover */
+    [aria-label][role~="message"]:hover::before {
+        opacity: 1;
+        transform: translate(-50%, -55px);
+        -o-transform: translate(-50%, -55px);
+        -moz-transform: translate(-50%, -55px);
+        -webkit-transform: translate(-50%, -55px);
+        transition-delay: 1s;
+        -o-transition-delay: 1s;
+        -moz-transition-delay: 1s;
+        -webkit-transition-delay: 1s;
+    }
+}

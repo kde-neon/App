@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    color: aliceblue;
+    font-family: sans-serif;
+    background: #010114;
+}
+
+/* flex */
+.flex {
+    display: flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+}
+
+.fx-cl {
+    align-items: center;
+    justify-content: left;
+}
+
+.left {
+    margin-top: 40px;
+    margin-left: 80px;
+    position: absolute;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
